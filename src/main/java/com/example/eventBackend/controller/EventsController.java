@@ -38,4 +38,12 @@ public class EventsController {
 
         return eventsRepository.findAll();
     }
+
+    @GetMapping("/getEventById/{eventId}")
+    @CrossOrigin
+    public Events getAllEventById(@PathVariable int eventId){
+
+
+        return eventsRepository.findById(eventId).orElseThrow(() -> new IllegalArgumentException(String.format("Can not found Event ID.")));
+    }
 }
