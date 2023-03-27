@@ -46,4 +46,11 @@ public class EventsController {
 
         return eventsRepository.findById(eventId).orElseThrow(() -> new IllegalArgumentException(String.format("Can not found Event ID.")));
     }
+
+    @DeleteMapping("/deleteEventBy/{eventId}")
+    @CrossOrigin
+    public void deleteEvent(@PathVariable int eventId){
+
+         eventsRepository.deleteById(eventId);
+    }
 }
