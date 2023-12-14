@@ -23,4 +23,14 @@ public class Events {
     String location;
     String description;
     String image;
+
+    public Events(String name, String dateString, String location, String description, String image) {
+        this.name = name;
+        this.dateString = dateString;
+        this.location = location;
+        this.description = description;
+        this.image = image;
+    }
+
+
 }

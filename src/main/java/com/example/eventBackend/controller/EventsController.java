@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
 @RestController
 public class EventsController {
@@ -18,28 +17,23 @@ public class EventsController {
     @PostMapping("/saveEvent")
     @CrossOrigin
     public void SaveEvents(@RequestBody Events event){
-        eventCrud.save(event);
+        eventCrud.saveOrUpdate(event);
     }
     @GetMapping("/getEvents")
     @CrossOrigin
     public List<Events> getAllEvent(){
-
-
-        return eventsRepository.findAll();
+        return eventCrud.findAll();
     }
 
     @GetMapping("/getEventById/{eventId}")
     @CrossOrigin
-    public Events getAllEventById(@PathVariable int eventId){
-
-
-        return eventsRepository.findById(eventId).orElseThrow(() -> new IllegalArgumentException(String.format("Can not found Event ID.")));
+    public Events getEventById(@PathVariable int eventId){
+        return eventCrud.findById(eventId);
     }
 
     @DeleteMapping("/deleteEventBy/{eventId}")
     @CrossOrigin
     public void deleteEvent(@PathVariable int eventId){
-
-         eventsRepository.deleteById(eventId);
+        eventCrud.deleteById(eventId);
     }
 }
