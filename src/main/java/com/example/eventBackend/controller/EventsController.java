@@ -2,6 +2,7 @@ package com.example.eventBackend.controller;
 
 import com.example.eventBackend.entity.Events;
 import com.example.eventBackend.repository.EventsRepository;
+import com.example.eventBackend.service.EventCrud;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,24 +13,12 @@ import java.util.Set;
 public class EventsController {
     @Autowired
     EventsRepository eventsRepository;
+    @Autowired
+    EventCrud eventCrud;
     @PostMapping("/saveEvent")
     @CrossOrigin
     public void SaveEvents(@RequestBody Events event){
-        Events eventUpdate ;
-        System.out.println("moin, "+event.getId());
-        if(event.getId() >0){
-         eventUpdate =   eventsRepository.findById(event.getId())
-                 .orElseThrow(() -> new IllegalArgumentException(String.format("Can not found event bY ID: ",event.getId())));
-        }else {
-            eventUpdate = new Events();
-        }
-        eventUpdate.setDescription( event.getDescription());
-        eventUpdate.setName(event.getName());
-        eventUpdate.setLocation(event.getLocation());
-        eventUpdate.setDateString(event.getDateString());
-        eventUpdate.setImage(event.getImage());
-
-        eventsRepository.save(event);
+        eventCrud.save(event);
     }
     @GetMapping("/getEvents")
     @CrossOrigin
