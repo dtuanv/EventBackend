@@ -21,6 +21,13 @@ class EventCrudTest {
     @Autowired
     EventCrud eventCrud;
 
+    @Test
+    void cannotSaveWhenLocationIsNull() {
+        Events eventNoLocation = new Events("Test","08/01/2024", null, "des","img")  ;
+        eventNoLocation =  eventCrud.saveOrUpdate(eventNoLocation);
+
+        assertEquals(eventNoLocation, null);
+    }
 
     @Test
     void testAddEvent() {
