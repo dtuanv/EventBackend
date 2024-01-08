@@ -45,9 +45,7 @@ class EventCrudTest {
     @Test
     void deleteEvent_Success() {
         Events event = createAnEvent();
-        Events event2 = createAnEvent();
-        List<Events> loadEvents2 =  eventCrud.findAll();
-
+        createAnEvent();
         eventCrud.deleteById(event.getId());
       List<Events> loadEvents =  eventCrud.findAll();
       assertThat(loadEvents.stream().anyMatch(e -> e.getId() == event.getId())).isFalse();
