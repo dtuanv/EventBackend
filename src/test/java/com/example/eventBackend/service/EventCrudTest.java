@@ -22,8 +22,16 @@ class EventCrudTest {
     EventCrud eventCrud;
 
     @Test
+    void passCategoryWhenSaveOrUpdate() {
+        Events event = new Events("Test","08/01/2024", "hAMBURG", "des","img","Music")  ;
+        event =  eventCrud.saveOrUpdate(event);
+
+        assertThat(event.getCategory() != null).isTrue();
+    }
+
+    @Test
     void cannotSaveWhenLocationIsNull() {
-        Events eventNoLocation = new Events("Test","08/01/2024", null, "des","img")  ;
+        Events eventNoLocation = new Events("Test","08/01/2024", null, "des","img","")  ;
         eventNoLocation =  eventCrud.saveOrUpdate(eventNoLocation);
 
         assertEquals(eventNoLocation, null);
@@ -40,7 +48,7 @@ class EventCrudTest {
     @Test
     void testUpdateEvent() {
         Events event = createAnEvent();
-        Events eventToUpdate = new Events("eventUpdate","14/12/2023","HH","test des","img");
+        Events eventToUpdate = new Events("eventUpdate","14/12/2023","HH","test des","img","");
         eventToUpdate.setId(event.getId());
         eventCrud.saveOrUpdate(eventToUpdate);
 
@@ -59,7 +67,7 @@ class EventCrudTest {
     }
 
     private Events createAnEvent() {
-        Events event = new Events("Event test", "14/12/2023", "Hamburg", "test des", "img");
+        Events event = new Events("Event test", "14/12/2023", "Hamburg", "test des", "img","");
         event =  eventCrud.saveOrUpdate(event);
         return event;
     }

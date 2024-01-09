@@ -23,13 +23,15 @@ public class Events {
     String location;
     String description;
     String image;
+    String category;
 
-    public Events(String name, String dateString, String location, String description, String image) {
+    public Events(String name, String dateString, String location, String description, String image,String category) {
         this.name = name;
         this.dateString = dateString;
         this.location = location;
         this.description = description;
         this.image = image;
+        this.category= category;
     }
 
 
