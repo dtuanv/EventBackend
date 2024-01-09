@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: eventsCalender 
+    volumes:
+      - events_calender:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  events_calender:
