@@ -26,6 +26,7 @@ public class EventCrud {
         }else{
             eventUpdate.setLocation(event.getLocation());
         }
+        eventUpdate.setCategory(event.getCategory());
         eventUpdate.setDateString(event.getDateString());
         eventUpdate.setImage(event.getImage());
 
