@@ -34,7 +34,13 @@ public class EventCrud {
             eventUpdate.setLocation(event.getLocation());
         }
 
-        return    eventsRepository.save(eventUpdate);
+//        if(event.getImage() == null){
+//            return null;
+//        }else {
+//            eventUpdate.setImage(event.getImage());
+//        }
+
+     return    eventsRepository.save(eventUpdate);
     }
 
     public Events findById(int eventId){
@@ -42,6 +48,7 @@ public class EventCrud {
     }
 
     public void deleteById(int id){
+
         eventsRepository.deleteById(id);
     }
 

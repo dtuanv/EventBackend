@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -16,13 +17,13 @@ public class Events {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String name;
-    String date;
+    LocalDate date;
     String location;
     String description;
     String image;
     String category;
 
-    public Events(String name, String date, String location, String description, String image, String category) {
+    public Events(String name, LocalDate date, String location, String description, String image, String category) {
         this.name = name;
         this.date = date;
         this.location = location;
