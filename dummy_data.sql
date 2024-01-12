@@ -1,0 +1,19 @@
+INSERT INTO events (name, date, location, description, image, category)
+VALUES
+    ('Groovy Gala', '2023-11-05', 'Funky Town, Hamburg', 'A dazzling night filled with groovy beats and funky vibes. Join us for an unforgettable musical experience!', 'image.jpg', 'Music'),
+    ('Artistic Wonderland', '2023-11-10', 'Colorful Heights, Hamburg', 'Step into a world of imagination and creativity. Explore various art forms and let your senses run wild!', 'image.jpg', 'Art'),
+    ('Theater Extravaganza', '2023-11-15', 'Drama District, Hamburg', 'Get ready for an evening of drama and laughter. Our talented performers will take you on a rollercoaster of emotions!', 'image.jpg', 'Theater'),
+    ('Jazz Jamboree', '2023-11-20', 'Swing Street, Hamburg', 'Immerse yourself in the smooth sounds of jazz. A jamboree of talented musicians awaits you for a night of soulful tunes.', 'image.jpg', 'Music'),
+    ('Pixel Art Fiesta', '2023-11-25', 'Bit Lane, Hamburg', 'Experience the magic of pixel art at our fiesta. Dive into the world of digital creativity and explore the beauty of pixels!', 'image.jpg', 'Art'),
+    ('Comedy Carnival', '2023-12-01', 'Laughs Lane, Hamburg', 'Prepare for a night of laughter and fun. Our comedians are ready to tickle your funny bone in this carnival of comedy!', 'image.jpg', 'Theater'),
+    ('Samba Spectacle', '2023-12-06', 'Rhythm Road, Hamburg', 'Feel the energy of samba in this spectacular event. Dance the night away with lively beats and vibrant performances!', 'image.jpg', 'Music'),
+    ('Whimsical Watercolors', '2023-12-11', 'Palette Park, Hamburg', 'Dive into the world of watercolors. Join us for a whimsical journey through the colors and emotions of this captivating art form!', 'image.jpg', 'Art'),
+    ('Magic Moments Cabaret', '2024-02-15', 'Enchantment Alley, Hamburg', 'Experience a night of magic and wonder at our cabaret. Prepare to be mesmerized by astonishing illusions and captivating performances!', 'image.jpg', 'Theater'),
+    ('Latin Rhythms Fiesta', '2024-02-20', 'Salsa Street, Hamburg', 'Let the Latin rhythms take over! Join us for a fiesta filled with salsa, merengue, and the vibrant spirit of Latin music.', 'image.jpg', 'Music'),
+    ('Fantasy Art Fair', '2024-02-25', 'Imagination Square, Hamburg', 'Step into a world of fantasy at our art fair. Explore artworks that transport you to magical realms and spark your imagination!', 'image.jpg', 'Art'),
+    ('Hilarious Improv Night', '2024-03-01', 'Chuckling Corner, Hamburg', 'Be part of the hilarity! Our improv night promises spontaneous laughter and unexpected moments that will leave you in stitches.', 'image.jpg', 'Theater'),
+    ('Electronic Beats Explosion', '2024-03-06', 'Techno Terrace, Hamburg', 'Get ready for an explosion of electronic beats! Join us for a night of techno, house, and electronic music that will make you dance till dawn.', 'image.jpg', 'Music'),
+    ('Abstract Art Odyssey', '2024-03-11', 'Canvas Crescent, Hamburg', 'Embark on an abstract art odyssey. Immerse yourself in the world of shapes and colors that defy convention and spark your imagination!', 'image.jpg', 'Art'),
+    ('Mystery Theater Masquerade', '2024-04-15', 'Masquerade Manor, Hamburg', 'Enter a world of mystery and intrigue at our masquerade. Enjoy a night of suspenseful theater with a touch of glamour and secrecy!', 'image.jpg', 'Theater'),
+    ('Reggae Rhythms Beach Party', '2024-04-20', 'Reggae Retreat, Hamburg', 'Feel the reggae rhythms at our beach party! Join us for a laid-back evening filled with good vibes, sandy shores, and tropical tunes.', 'image.jpg', 'Music'),
+    ('Modern Art Fusion', '2024-04-25', 'Gallery Grove, Hamburg', 'Witness the fusion of modern art styles. Our exhibition brings together diverse artistic expressions that push the boundaries of creativity!', 'image.jpg', 'Art');

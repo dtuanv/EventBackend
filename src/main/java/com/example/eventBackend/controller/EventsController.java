@@ -19,9 +19,10 @@ public class EventsController {
     public void SaveEvents(@RequestBody Events event){
         eventCrud.saveOrUpdate(event);
     }
+
     @GetMapping("/getEvents")
     @CrossOrigin
-    public List<Events> getAllEvent(){
+    public List<Events> getAllEvents(){
         return eventCrud.findAll();
     }
 
