@@ -19,15 +19,15 @@ public class Events {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String name;
-    String dateString;
+    String date;
     String location;
     String description;
     String image;
     String category;
 
-    public Events(String name, String dateString, String location, String description, String image,String category) {
+    public Events(String name, String date, String location, String description, String image, String category) {
         this.name = name;
-        this.dateString = dateString;
+        this.date = date;
         this.location = location;
         this.description = description;
         this.image = image;
