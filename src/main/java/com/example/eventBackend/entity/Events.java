@@ -16,11 +16,18 @@ public class Events {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
+
     String name;
+
     LocalDate date;
+
     String location;
+
+    @Column(columnDefinition = "TEXT")
     String description;
+
     String image;
+
     String category;
 
     public Events(String name, LocalDate date, String location, String description, String image, String category) {

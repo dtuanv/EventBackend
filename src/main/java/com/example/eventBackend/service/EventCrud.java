@@ -5,6 +5,7 @@ import com.example.eventBackend.repository.EventsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -12,6 +13,7 @@ public class EventCrud {
 
     @Autowired
     EventsRepository eventsRepository;
+
     public Events saveOrUpdate(Events event) {
 
         Events eventUpdate;
@@ -48,12 +50,22 @@ public class EventCrud {
     }
 
     public void deleteById(int id){
-
         eventsRepository.deleteById(id);
     }
 
-
     public List<Events> findAll() {
       return   eventsRepository.findAll();
+    }
+
+    public List<Events> getEventsByDateRange(LocalDate startDate, LocalDate endDate) {
+        return eventsRepository.findByDateBetween(startDate, endDate);
+    }
+
+    public List<Events> getEventsByCategory(String category) {
+        return eventsRepository.findByCategory(category);
+    }
+
+    public List<Events> getEventsByLocation(String location) {
+        return eventsRepository.findByLocation(location);
     }
 }
