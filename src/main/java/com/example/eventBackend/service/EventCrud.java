@@ -36,11 +36,11 @@ public class EventCrud {
             eventUpdate.setLocation(event.getLocation());
         }
 
-//        if(event.getImage() == null){
-//            return null;
-//        }else {
-//            eventUpdate.setImage(event.getImage());
-//        }
+        if(event.getImage() == null){
+            return null;
+        }else {
+            eventUpdate.setImage(event.getImage());
+        }
 
      return    eventsRepository.save(eventUpdate);
     }
