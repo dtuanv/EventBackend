@@ -30,13 +30,13 @@ class EventCrudTest {
 
         assertThat(event.getCategory() != null).isTrue();
     }
-//    @Test
-//    void cannotSaveWhenImageIsNull() {
-//        Events eventNoImage = new Events("Test", LocalDate.of(2024, 1, 18), "hh", "des",null,"")  ;
-//        eventNoLocation =  eventCrud.saveOrUpdate(eventNoImage);
-//
-//        assertEquals(eventNoImage, null);
-//    }
+    @Test
+    void cannotSaveWhenImageIsNull() {
+        Events eventNoImage = new Events("Test", LocalDate.of(2024, 1, 18), "hh", "des",null,"")  ;
+        eventNoImage =  eventCrud.saveOrUpdate(eventNoImage);
+
+        assertEquals(eventNoImage, null);
+    }
 
     @Test
     void cannotSaveWhenLocationIsNull() {
